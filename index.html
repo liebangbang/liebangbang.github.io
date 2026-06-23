@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yanqing Wei (魏彦卿) — Founder, B&B Group</title>
+    <meta name="description" content="Yanqing Wei (魏彦卿) — Founder of B&B Group. Employer branding, executive search, and career consulting. Connecting top tech talent with great opportunities.">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💼</text></svg>">
+    <style>
+        :root {
+            --bg: #ffffff;
+            --text: #1a1a2e;
+            --text-secondary: #555;
+            --accent: #2F81F7;
+            --accent-light: #e8f0fe;
+            --border: #e5e7eb;
+            --card-bg: #f8fafc;
+            --max-width: 800px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+            color: var(--text);
+            background: var(--bg);
+            line-height: 1.75;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ── Header ── */
+        header {
+            padding: 80px 0 40px;
+            text-align: center;
+        }
+
+        .avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #2F81F7, #60a5fa);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            color: #fff;
+            margin: 0 auto 24px;
+            box-shadow: 0 4px 20px rgba(47, 129, 247, 0.3);
+        }
+
+        header h1 {
+            font-size: 32px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            color: var(--text);
+            margin-bottom: 8px;
+        }
+
+        header .subtitle {
+            font-size: 16px;
+            color: var(--text-secondary);
+            font-weight: 400;
+        }
+
+        header .links {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        header .links a {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 18px;
+            border-radius: 24px;
+            background: var(--card-bg);
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            border: 1px solid var(--border);
+            transition: all 0.2s;
+        }
+
+        header .links a:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+            background: var(--accent-light);
+        }
+
+        /* ── Section ── */
+        section {
+            padding: 48px 0;
+        }
+
+        section + section {
+            border-top: 1px solid var(--border);
+        }
+
+        h2 {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 24px;
+            color: var(--text);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        h2::before {
+            content: "";
+            display: inline-block;
+            width: 4px;
+            height: 20px;
+            background: var(--accent);
+            border-radius: 2px;
+        }
+
+        p {
+            margin-bottom: 16px;
+            color: var(--text-secondary);
+        }
+
+        /* ── Cards ── */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
+            margin-top: 8px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            transition: box-shadow 0.2s, transform 0.2s;
+        }
+
+        .card:hover {
+            box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+            transform: translateY(-2px);
+        }
+
+        .card h3 {
+            font-size: 16px;
+            margin-bottom: 8px;
+            color: var(--text);
+        }
+
+        .card p {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-bottom: 0;
+            line-height: 1.6;
+        }
+
+        .card .icon {
+            font-size: 28px;
+            margin-bottom: 12px;
+        }
+
+        /* ── Timeline ── */
+        .timeline {
+            list-style: none;
+            padding: 0;
+        }
+
+        .timeline li {
+            display: flex;
+            gap: 20px;
+            padding-bottom: 28px;
+            position: relative;
+        }
+
+        .timeline li:not(:last-child)::after {
+            content: "";
+            position: absolute;
+            left: 44px;
+            top: 48px;
+            bottom: 0;
+            width: 1px;
+            background: var(--border);
+        }
+
+        .timeline .time-badge {
+            flex-shrink: 0;
+            width: 88px;
+            height: 28px;
+            background: var(--accent-light);
+            color: var(--accent);
+            font-size: 12px;
+            font-weight: 600;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .timeline .content h3 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 2px;
+        }
+
+        .timeline .content .role {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        /* ── Highlight box ── */
+        .highlight {
+            background: linear-gradient(135deg, var(--accent-light), #f0f5ff);
+            border: 1px solid #d0e0fd;
+            border-radius: 12px;
+            padding: 28px 32px;
+            text-align: center;
+            margin-top: 16px;
+        }
+
+        .highlight p {
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--text);
+            margin-bottom: 8px;
+        }
+
+        .highlight .sub {
+            font-size: 14px;
+            color: var(--text-secondary);
+            font-weight: 400;
+        }
+
+        /* ── Contact ── */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 12px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 14px 18px;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            text-decoration: none;
+            color: var(--text);
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+
+        .contact-item:hover {
+            border-color: var(--accent);
+            background: var(--accent-light);
+        }
+
+        .contact-item .ci-icon {
+            font-size: 22px;
+        }
+
+        /* ── Footer ── */
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            color: var(--text-secondary);
+            font-size: 13px;
+        }
+
+        /* ── Responsive ── */
+        @media (max-width: 600px) {
+            header { padding: 48px 0 32px; }
+            header h1 { font-size: 26px; }
+            .timeline li { gap: 12px; }
+            .timeline .time-badge { width: 72px; font-size: 11px; }
+            .card-grid { grid-template-columns: 1fr; }
+            .contact-grid { grid-template-columns: 1fr 1fr; }
+        }
+
+        /* ── Print / Selection ── */
+        ::selection {
+            background: var(--accent-light);
+            color: var(--accent);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- ── Header ── -->
+    <header>
+        <div class="avatar">🧑‍💼</div>
+        <h1>Yanqing Wei <span style="font-weight:400;font-size:20px;">魏彦卿</span></h1>
+        <p class="subtitle">Founder, B&B Group &nbsp;·&nbsp; Talent Strategy &amp; Employer Branding</p>
+        <div class="links">
+            <a href="https://www.linkedin.com/in/weiyanqing" target="_blank">💼 LinkedIn</a>
+            <a href="https://bestlinkbest.com" target="_blank">🌐 bestlinkbest.com</a>
+            <a href="mailto:job@liebangbang.com">📧 job@liebangbang.com</a>
+            <a href="#">💬 微信：liebangbang</a>
+        </div>
+    </header>
+
+    <!-- ── About ── -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p>
+            I'm the <strong>Founder of B&B Group</strong>, a professional service firm dedicated to <strong>employer branding, executive search, and career consulting</strong>.
+        </p>
+        <p>
+            With over <strong>10 years of HR leadership</strong> experience across Haier, Mengniu, and Zepp Health, I've spent my career bridging the gap between great companies and great people. Now I'm building something of my own — a transparent, mutually beneficial talent ecosystem grounded in long-term value.
+        </p>
+        <p>
+            我创立了 B&B Group，专注于雇主品牌建设、高端人才猎聘和职业咨询服务。我们秉持长期价值导向，帮助企业在全球范围吸引、保留和管理顶尖人才，同时也帮助专业人士追求更有意义的职业生涯。
+        </p>
+
+        <div class="highlight">
+            <p>🎯 I connect outstanding tech talent with outstanding opportunities.</p>
+            <p class="sub">连接优秀人才与卓越的机会</p>
+        </div>
+    </section>
+
+    <!-- ── What I Do ── -->
+    <section id="services">
+        <h2>What I Do</h2>
+        <div class="card-grid">
+            <div class="card">
+                <div class="icon">🏢</div>
+                <h3>Employer Branding</h3>
+                <p>Help companies tell their story to the right audience. Build authentic employer brands that attract top technical talent.</p>
+            </div>
+            <div class="card">
+                <div class="icon">🔍</div>
+                <h3>Executive Search</h3>
+                <p>Identify and recruit high-impact technical leaders. From senior engineers to CTOs, we find the people who move the needle.</p>
+            </div>
+            <div class="card">
+                <div class="icon">🧭</div>
+                <h3>Career Consulting</h3>
+                <p>Help professionals navigate their careers with clarity. Resume review, interview prep, offer negotiation — we've got you.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── Why Connect ── -->
+    <section id="why">
+        <h2>Why Developers Connect With Me</h2>
+        <p>If you're a developer, engineer, or technical leader, here's why you might want to follow:</p>
+
+        <ul style="list-style:none;padding:0;">
+            <li style="padding:10px 0;display:flex;gap:12px;align-items:flex-start;border-bottom:1px solid var(--border);">
+                <span style="font-size:20px;">🔗</span>
+                <span><strong>Direct access to hiring decisions</strong> — not an agency middleman, but someone who works directly with founders and C-level execs.</span>
+            </li>
+            <li style="padding:10px 0;display:flex;gap:12px;align-items:flex-start;border-bottom:1px solid var(--border);">
+                <span style="font-size:20px;">🧠</span>
+                <span><strong>I understand the tech talent market</strong> — from frontend to AI/ML, I track what skills are in demand and where the opportunities are.</span>
+            </li>
+            <li style="padding:10px 0;display:flex;gap:12px;align-items:flex-start;border-bottom:1px solid var(--border);">
+                <span style="font-size:20px;">💬</span>
+                <span><strong>Free career advice</strong> — stuck in your job search? Not sure what's next? DM me. No strings attached.</span>
+            </li>
+            <li style="padding:10px 0;display:flex;gap:12px;align-items:flex-start;">
+                <span style="font-size:20px;">🌏</span>
+                <span><strong>Bilingual &amp; cross-border</strong> — opportunities across China and global markets.</span>
+            </li>
+        </ul>
+    </section>
+
+    <!-- ── Experience ── -->
+    <section id="experience">
+        <h2>Experience</h2>
+        <ul class="timeline">
+            <li>
+                <span class="time-badge">2021 — Now</span>
+                <div class="content">
+                    <h3>Founder</h3>
+                    <p class="role">B&B Group &nbsp;·&nbsp; Beijing, China</p>
+                    <p style="font-size:14px;margin-top:4px;">Lead overall operations and strategic development. Focus on employer branding, executive search &amp; career consulting.</p>
+                </div>
+            </li>
+            <li>
+                <span class="time-badge">2019 — 2020</span>
+                <div class="content">
+                    <h3>Recruitment Ops Manager</h3>
+                    <p class="role">Zepp Health (Smart Wearables) &nbsp;·&nbsp; Beijing, China</p>
+                    <p style="font-size:14px;margin-top:4px;">End-to-end recruitment operations for this global smart wearable device brand.</p>
+                </div>
+            </li>
+            <li>
+                <span class="time-badge">2018</span>
+                <div class="content">
+                    <h3>Senior Recruiting Manager</h3>
+                    <p class="role">蒙牛 (Mengniu) &nbsp;·&nbsp; Beijing, China</p>
+                    <p style="font-size:14px;margin-top:4px;">Group-level recruitment management and policy formulation. Direct talent support for C-suite.</p>
+                </div>
+            </li>
+            <li>
+                <span class="time-badge">2015 — 2018</span>
+                <div class="content">
+                    <h3>HRM</h3>
+                    <p class="role">海尔 (Haier) &nbsp;·&nbsp; Qingdao, China</p>
+                    <p style="font-size:14px;margin-top:4px;">Group recruitment policies, channel management &amp; campus recruiting programs.</p>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <!-- ── Education ── -->
+    <section id="education">
+        <h2>Education</h2>
+        <ul class="timeline">
+            <li>
+                <span class="time-badge">MBA</span>
+                <div class="content">
+                    <h3>中国人民大学 &mdash; Renmin University of China</h3>
+                    <p class="role">Master of Business Administration, Human Resources</p>
+                </div>
+            </li>
+            <li>
+                <span class="time-badge">B.S.</span>
+                <div class="content">
+                    <h3>太原理工大学 &mdash; Taiyuan University of Technology</h3>
+                    <p class="role">Marketing</p>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <!-- ── Philosophy ── -->
+    <section id="philosophy">
+        <h2>Our Philosophy</h2>
+        <div class="highlight">
+            <p style="font-size:18px;">"Honesty, kindness, and goodness create the most valuable things."</p>
+            <p class="sub">真诚、善良与美好，创造最有价值的事</p>
+            <p style="margin-top:16px;font-weight:600;">Everyone Enjoys A Good Job. &nbsp;·&nbsp; 让每个人享受工作的乐趣</p>
+        </div>
+    </section>
+
+    <!-- ── Contact ── -->
+    <section id="contact">
+        <h2>Let's Talk</h2>
+        <p>I'm always open to connecting with talented people. Whether you're passively browsing or actively looking — if you care about building a meaningful career, let's chat.</p>
+        <p style="font-size:14px;">欢迎联系，无论是被动浏览还是主动寻找机会，只要你对职业发展有追求，随时交流。</p>
+
+        <div class="contact-grid" style="margin-top:20px;">
+            <a href="mailto:job@liebangbang.com" class="contact-item">
+                <span class="ci-icon">📧</span> job@liebangbang.com
+            </a>
+            <a href="#" class="contact-item">
+                <span class="ci-icon">💬</span> 微信：liebangbang
+            </a>
+            <a href="https://bestlinkbest.com" target="_blank" class="contact-item">
+                <span class="ci-icon">🌐</span> bestlinkbest.com
+            </a>
+            <a href="https://www.linkedin.com/in/weiyanqing" target="_blank" class="contact-item">
+                <span class="ci-icon">💼</span> LinkedIn
+            </a>
+        </div>
+    </section>
+
+    <!-- ── Footer ── -->
+    <footer>
+        <p>&copy; 2026 Yanqing Wei &nbsp;·&nbsp; Built with ♥ for the tech community</p>
+    </footer>
+
+</div>
+
+</body>
+</html>
