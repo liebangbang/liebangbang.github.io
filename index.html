@@ -198,7 +198,6 @@
         }
 
         .intro-grid,
-        .focus-grid,
         .experience-grid,
         .contact-grid {
             display: grid;
@@ -229,7 +228,6 @@
         .intro-copy strong { color: var(--ink); }
 
         .practice-list,
-        .focus-list,
         .timeline,
         .contact-list { border-top: 1px solid var(--line); }
 
@@ -255,30 +253,9 @@
         }
 
         .practice-row p,
-        .focus-item p,
         .timeline-row p {
             margin: 0;
             color: var(--muted);
-        }
-
-        .focus-grid { background: var(--surface); }
-
-        .focus-list { display: grid; grid-template-columns: 1fr 1fr; }
-
-        .focus-item {
-            min-height: 104px;
-            padding: 20px 18px 20px 0;
-            border-bottom: 1px solid var(--line);
-        }
-
-        .focus-item:nth-child(odd) { border-right: 1px solid var(--line); }
-
-        .focus-item:nth-child(even) { padding-left: 24px; }
-
-        .focus-item strong {
-            display: block;
-            margin-bottom: 4px;
-            font-size: 17px;
         }
 
         .timeline-row {
@@ -290,18 +267,14 @@
 
         .timeline-row h3 { margin: 0 0 3px; font-size: 18px; }
 
-        .philosophy { background: var(--surface); }
-
-        .quote {
-            max-width: 900px;
-            margin: 0;
-            font-family: Georgia, "Times New Roman", serif;
-            font-size: 44px;
-            font-weight: 500;
-            line-height: 1.15;
+        .focus-line {
+            max-width: 700px;
+            margin: 24px 0 0;
+            color: var(--accent);
+            font-size: 15px;
+            font-weight: 700;
+            line-height: 1.6;
         }
-
-        .quote-en { margin: 20px 0 0; color: var(--accent); font-family: Georgia, "Times New Roman", serif; font-size: 21px; }
 
         .contact-list { display: grid; }
 
@@ -351,7 +324,6 @@
             h1 { font-size: 72px; }
 
             .intro-grid,
-            .focus-grid,
             .experience-grid,
             .contact-grid { grid-template-columns: minmax(260px, 0.8fr) minmax(0, 1.6fr); gap: 88px; }
 
@@ -376,7 +348,6 @@
             <nav class="nav-links" aria-label="Primary navigation">
                 <a href="#about">About</a>
                 <a href="#practice">Practice</a>
-                <a href="#focus">Focus</a>
                 <a href="#experience">Experience</a>
                 <a href="#contact">Contact</a>
             </nav>
@@ -389,7 +360,7 @@
             <div class="shell hero-layout">
                 <div>
                     <p class="eyebrow">Founder / B&amp;B Group</p>
-                    <h1 id="hero-title">Work should create value for organizations and meaning for people.</h1>
+                    <h1 id="hero-title">Better work begins with better understanding.</h1>
                     <p class="hero-name">Yanqing Wei</p>
                     <p class="hero-copy">Founder of B&amp;B Group, working at the intersection of talent, technology and the future of work.</p>
                     <div class="hero-actions">
@@ -405,7 +376,7 @@
             <div class="shell intro-grid">
                 <div>
                     <p class="section-index">01 / About</p>
-                    <h2 id="about-title">A long-term view of the relationship between people and work.</h2>
+                    <h2 id="about-title">A long-term view of people, work and organizations.</h2>
                 </div>
                 <p class="intro-copy">Yanqing Wei founded B&amp;B Group after more than ten years in recruitment and HR management across Haier, Mengniu and Zepp Health. His work now focuses on executive search, employer brand and career advisory for technology companies and technical professionals.</p>
             </div>
@@ -435,27 +406,13 @@
             </div>
         </section>
 
-        <section class="section focus-grid" id="focus" aria-labelledby="focus-title">
-            <div class="shell">
-                <p class="section-index">03 / Focus</p>
-                <h2 id="focus-title">Technical depth is the beginning of better talent decisions.</h2>
-            </div>
-            <div class="shell focus-list">
-                <div class="focus-item"><strong>Foundation models</strong><p>Training, inference and model architecture.</p></div>
-                <div class="focus-item"><strong>Embodied AI</strong><p>VLA, robot learning and physical agents.</p></div>
-                <div class="focus-item"><strong>AI infrastructure</strong><p>Systems, platforms, compute and efficiency.</p></div>
-                <div class="focus-item"><strong>Computer vision</strong><p>Vision, multimodal systems and 3D perception.</p></div>
-                <div class="focus-item"><strong>Robotics</strong><p>Software, hardware, control and productization.</p></div>
-                <div class="focus-item"><strong>Technical leadership</strong><p>Scientists, technical leaders and founders.</p></div>
-            </div>
-        </section>
-
         <section class="section" id="experience" aria-labelledby="experience-title">
             <div class="shell experience-grid">
                 <div>
-                    <p class="section-index">04 / Experience</p>
+                    <p class="section-index">03 / Experience</p>
                     <h2 id="experience-title">From in-house recruiting to independent talent work.</h2>
                     <p class="experience-copy">Working close to hiring decisions has shaped a simple approach: understand the real objective of a role, the direction of a person and whether both can create lasting value together.</p>
+                    <p class="focus-line">Focus: foundation models, embodied AI, AI infrastructure, computer vision, robotics and technical leadership.</p>
                 </div>
                 <div class="timeline">
                     <article class="timeline-row"><div class="timeline-time">2021 - present</div><div><h3>B&amp;B Group · Founder</h3><p>Executive search, employer brand and career advisory.</p></div></article>
@@ -466,18 +423,10 @@
             </div>
         </section>
 
-        <section class="section philosophy" aria-labelledby="philosophy-title">
-            <div class="shell">
-                <p class="section-index">05 / Philosophy</p>
-                <p class="quote" id="philosophy-title">Honesty, kindness and goodness create the most valuable things.</p>
-                <p class="quote-en">A better future of work begins with better understanding.</p>
-            </div>
-        </section>
-
         <section class="section" id="contact" aria-labelledby="contact-title">
             <div class="shell contact-grid">
                 <div>
-                    <p class="section-index">06 / Contact</p>
+                    <p class="section-index">04 / Contact</p>
                     <h2 id="contact-title">Looking for a key person, or considering your next move?</h2>
                     <p class="contact-copy">Whether you represent a growing technology company or are taking a serious look at your next opportunity, a direct conversation is a good place to start.</p>
                 </div>
@@ -499,3 +448,4 @@
     </footer>
 </body>
 </html>
+
