@@ -5,24 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yanqing Wei 魏彦卿 | B&B Group</title>
     <meta name="description" content="B&B Group 创始人魏彦卿，专注 AI、机器人与前沿科技行业的高端人才猎聘、雇主品牌和职业咨询。">
-    <meta name="theme-color" content="#111714">
+    <meta name="theme-color" content="#000000">
     <meta property="og:title" content="Yanqing Wei 魏彦卿 | B&B Group">
     <meta property="og:description" content="连接真正优秀的人才与值得投入的机会。">
     <meta property="og:image" content="https://liebangbang.github.io/assets/yanqing-wei.jpg">
     <link rel="icon" href="assets/yanqing-wei.jpg">
     <style>
         :root {
-            --ink: #17201c;
-            --ink-soft: #4d5b54;
+            --ink: #171717;
+            --ink-soft: #616161;
             --paper: #ffffff;
-            --canvas: #f3f6f4;
-            --line: #dce3df;
-            --blue: #1767d2;
-            --blue-dark: #0e438a;
-            --green: #1b7653;
-            --red: #e7543d;
-            --hero: #111714;
-            --hero-soft: #bcc9c1;
+            --canvas: #f7f7f5;
+            --line: #e2e2de;
+            --accent: #8f6c5a;
+            --hero: #000000;
+            --hero-soft: #c8c1bc;
             --content: 1180px;
         }
 
@@ -97,7 +94,7 @@
         }
 
         .nav-links a {
-            color: #dbe4de;
+            color: #d5d2cf;
             text-decoration: none;
             font-size: 14px;
         }
@@ -112,19 +109,21 @@
             position: relative;
             overflow: hidden;
             background-color: var(--hero);
-            background-image: url("assets/yanqing-wei.jpg");
-            background-repeat: no-repeat;
-            background-position: calc(100% - 8vw) bottom;
-            background-size: 520px auto;
             color: #fff;
         }
 
-        .hero::after {
-            content: "";
+        .hero-portrait {
             position: absolute;
-            inset: auto 0 0;
-            height: 120px;
-            background: rgba(17, 23, 20, 0.52);
+            z-index: 0;
+            right: 8vw;
+            bottom: 0;
+            width: 520px;
+            height: 520px;
+            overflow: hidden;
+            background-image: url("assets/yanqing-wei.jpg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: calc(100% + 8px) auto;
             pointer-events: none;
         }
 
@@ -140,7 +139,7 @@
 
         .eyebrow {
             margin: 0 0 20px;
-            color: #a9d8c2;
+            color: var(--hero-soft);
             font-size: 14px;
             font-weight: 700;
         }
@@ -156,7 +155,7 @@
         .hero-name {
             display: block;
             margin-top: 18px;
-            color: #dce6e0;
+            color: #ddd7d2;
             font-size: 21px;
             font-weight: 520;
         }
@@ -164,7 +163,7 @@
         .hero-copy {
             max-width: 650px;
             margin: 28px 0 0;
-            color: #c8d2cc;
+            color: #c8c4c1;
             font-size: 18px;
             line-height: 1.8;
         }
@@ -191,13 +190,14 @@
         }
 
         .button-primary {
-            background: var(--red);
-            color: #fff;
+            border-color: #fff;
+            background: #fff;
+            color: #111;
         }
 
         .button-secondary {
             border-color: rgba(255, 255, 255, 0.42);
-            background: rgba(17, 23, 20, 0.5);
+            background: transparent;
             color: #fff;
         }
 
@@ -214,7 +214,7 @@
             display: flex;
             flex-wrap: wrap;
             gap: 28px;
-            color: #d8e2dc;
+            color: #d8d4d1;
             font-size: 13px;
         }
 
@@ -238,7 +238,7 @@
 
         .section-label {
             margin: 0 0 14px;
-            color: var(--green);
+            color: var(--accent);
             font-size: 13px;
             font-weight: 750;
         }
@@ -277,19 +277,26 @@
         .service-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 18px;
+            gap: 0;
+            border-top: 1px solid var(--line);
         }
 
         .service {
             min-height: 270px;
-            padding: 28px;
-            background: var(--paper);
-            border: 1px solid var(--line);
-            border-radius: 6px;
+            padding: 30px 30px 30px 0;
+            background: transparent;
+            border: 0;
+            border-bottom: 1px solid var(--line);
+            border-radius: 0;
+        }
+
+        .service + .service {
+            padding-left: 30px;
+            border-left: 1px solid var(--line);
         }
 
         .service-index {
-            color: var(--red);
+            color: var(--accent);
             font-size: 13px;
             font-weight: 750;
         }
@@ -306,8 +313,10 @@
         }
 
         .focus-band {
-            background: #17231e;
-            color: #fff;
+            background: var(--paper);
+            color: var(--ink);
+            border-top: 1px solid var(--line);
+            border-bottom: 1px solid var(--line);
         }
 
         .focus-layout {
@@ -318,7 +327,7 @@
         }
 
         .focus-band .section-label {
-            color: #84d4ad;
+            color: var(--accent);
         }
 
         .focus-band h2 {
@@ -328,18 +337,18 @@
         .focus-list {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            border-top: 1px solid rgba(255, 255, 255, 0.18);
+            border-top: 1px solid var(--line);
         }
 
         .focus-item {
             min-height: 102px;
             padding: 20px 18px 20px 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.18);
-            color: #d1ddd6;
+            border-bottom: 1px solid var(--line);
+            color: var(--ink-soft);
         }
 
         .focus-item:nth-child(odd) {
-            border-right: 1px solid rgba(255, 255, 255, 0.18);
+            border-right: 1px solid var(--line);
         }
 
         .focus-item:nth-child(even) {
@@ -349,7 +358,7 @@
         .focus-item strong {
             display: block;
             margin-bottom: 3px;
-            color: #fff;
+            color: var(--ink);
             font-size: 17px;
         }
 
@@ -380,7 +389,7 @@
         }
 
         .timeline-time {
-            color: var(--green);
+            color: var(--accent);
             font-size: 14px;
             font-weight: 750;
         }
@@ -435,7 +444,7 @@
         }
 
         .contact {
-            background: var(--blue-dark);
+            background: var(--hero);
             color: #fff;
         }
 
@@ -447,7 +456,7 @@
         }
 
         .contact .section-label {
-            color: #bcd6ff;
+            color: var(--hero-soft);
         }
 
         .contact h2 {
@@ -457,7 +466,7 @@
 
         .contact-copy {
             margin: 20px 0 0;
-            color: #d3e2f6;
+            color: #d5d2cf;
         }
 
         .contact-links {
@@ -488,8 +497,9 @@
         }
 
         footer {
-            background: #0d3529;
-            color: #b9cec5;
+            background: var(--hero);
+            color: #a9a9a9;
+            border-top: 1px solid rgba(255, 255, 255, 0.16);
         }
 
         .footer-inner {
@@ -507,9 +517,10 @@
         }
 
         @media (max-width: 920px) {
-            .hero {
-                background-position: calc(100% + 80px) bottom;
-                background-size: 470px auto;
+            .hero-portrait {
+                right: -80px;
+                width: 470px;
+                height: 470px;
             }
 
             .hero h1 {
@@ -551,9 +562,10 @@
                 min-height: 760px;
             }
 
-            .hero {
-                background-position: calc(100% + 62px) bottom;
-                background-size: 350px auto;
+            .hero-portrait {
+                right: -62px;
+                width: 350px;
+                height: 350px;
             }
 
             .hero-inner {
@@ -614,6 +626,12 @@
 
             .service {
                 min-height: 220px;
+                padding: 26px 0;
+            }
+
+            .service + .service {
+                padding-left: 0;
+                border-left: 0;
             }
 
             .timeline-row {
@@ -676,6 +694,7 @@
 
     <main>
         <section class="hero" id="top">
+            <div class="hero-portrait" aria-hidden="true"></div>
             <div class="shell hero-inner">
                 <div>
                     <p class="eyebrow">B&amp;B GROUP 创始人 / TALENT STRATEGIST</p>
